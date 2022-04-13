@@ -8,6 +8,8 @@ CFLAGS += -Wall -Werror -Wformat-security -Wignored-qualifiers -Winit-self \
 	-Wmissing-parameter-type -Wmissing-field-initializers -Wnested-externs \
 	-Wstack-usage=4096 -Wmissing-prototypes -Wfloat-equal -Wabsolute-value
 
+CFLAGS += -fsanitize=undefined -fsanitize-undefined-trap-on-error
+
 CC += -m32 -no-pie -fno-pie
 
 LDLIBS = -lm
